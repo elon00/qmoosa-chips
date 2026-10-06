@@ -25,6 +25,9 @@ jobs:
       - name: Run Automated Verification Suite
         run: npm test
 
+      - name: Run Formal Reality Gate Audit
+        run: npm run reality-gate
+
       - name: Run Full End-to-End Automation
         run: npm run automate
 
