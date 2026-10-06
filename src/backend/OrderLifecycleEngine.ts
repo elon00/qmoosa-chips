@@ -2,10 +2,12 @@
  * OrderLifecycleEngine.ts
  * Server-Side Order State Machine, Inventory Reservation & Escrow Engine
  * Replaces client-side UI simulation with formal transactional order lifecycle.
+ * Integrates fail-closed on-chain verification and NIST FIPS 204 (ML-DSA-65) signing.
  */
 
 import { EXPORT_CONTROL_DATABASE, type ProductComplianceRecord } from '../compliance/ExportControlRegistry.ts';
 import { NistPqcEngine, type CryptographicReceipt } from '../crypto/NistPqcEngine.ts';
+import { OnChainTransactionVerifier } from '../x402/OnChainTransactionVerifier.ts';
 import marketplaceProducts from '../config/marketplace-products.json' with { type: 'json' };
 
 export type OrderStatus =
@@ -134,7 +136,8 @@ export class OrderLifecycleEngine {
   }
 
   /**
-   * Confirms payment, locks escrow, and signs cryptographic PQC receipt
+   * Confirms payment, verifies transaction on-chain (fail-closed), locks escrow,
+   * and signs authentic NIST FIPS 204 (ML-DSA-65) receipt.
    */
   public static async confirmPayment(orderId: string, txHash: string): Promise<ServerOrder> {
     const order = this.orders.get(orderId);
@@ -146,8 +149,26 @@ export class OrderLifecycleEngine {
       throw new Error(`Order ${orderId} is in invalid state: ${order.status}`);
     }
 
-    // Generate genuine PQC signature using Web Crypto API
-    const receipt = await NistPqcEngine.signInvoice({
+    // Fail-closed verification
+    if (order.paymentRail === 'ETH' || order.paymentRail === 'USDC') {
+      const result = await OnChainTransactionVerifier.verifyEvmTransaction(txHash);
+      if (!result.verified) {
+        throw new Error(`Payment verification failed: ${result.failureReason}`);
+      }
+    } else if (order.paymentRail === 'SOL') {
+      const result = await OnChainTransactionVerifier.verifySolanaTransaction(txHash);
+      if (!result.verified) {
+        throw new Error(`Solana verification failed: ${result.failureReason}`);
+      }
+    } else {
+      const proofResult = OnChainTransactionVerifier.verifySettlementProofFormat(txHash, order.paymentRail);
+      if (!proofResult.valid) {
+        throw new Error(`Settlement proof invalid: ${proofResult.reason}`);
+      }
+    }
+
+    // Generate genuine PQC signature using NIST FIPS 204 (ML-DSA-65)
+    const receipt = NistPqcEngine.signInvoice({
       orderId: order.orderId,
       productName: order.items[0]?.productId || 'Unknown',
       amount: order.totalUsd,

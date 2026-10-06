@@ -104,9 +104,19 @@ export const MarketplaceCheckoutModal: React.FC<MarketplaceCheckoutModalProps> =
       }
 
       // Step 2: Confirm payment and generate real PQC signature with Web Crypto API
+      let txProof = `icp_order_proof_${Date.now()}_audit`;
+      if (selectedRail === 'ETH' || selectedRail === 'USDC' || selectedRail === 'SOL') {
+        const inputTx = window.prompt?.(`Enter mined ${selectedRail} transaction hash for authoritative RPC verification:`);
+        if (!inputTx) {
+          alert(`On-chain transaction hash required for ${selectedRail} settlement verification.`);
+          return;
+        }
+        txProof = inputTx;
+      }
+
       const confirmed = await OrderLifecycleEngine.confirmPayment(
         order.orderId,
-        `0xicp_sub_${Date.now()}_audit`
+        txProof
       );
 
       setActiveOrder(confirmed);

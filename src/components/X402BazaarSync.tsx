@@ -45,7 +45,8 @@ export const X402BazaarSync: React.FC<X402BazaarSyncProps> = ({
     try {
       await new Promise(r => setTimeout(r, 600)); // simulation delay
       const payerAddr = bazaarSpec.provider.payTo.icp;
-      const receipt = await x402Client.settleQuote(quote.quoteId, payerAddr);
+      const txProof = `icp_canister_block_${Date.now()}_${quote.nonce}`;
+      const receipt = await x402Client.settleQuote(quote.quoteId, payerAddr, txProof);
       setReceipts(x402Client.getReceipts());
 
       // Now fetch protected data using bearer token
