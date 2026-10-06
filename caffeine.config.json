@@ -1,0 +1,79 @@
+{
+  "caffeineVersion": "2.4.0",
+  "project": {
+    "id": "qmoosa-chips-icp",
+    "name": "QMoosa Chips",
+    "description": "Web 4.0 Decentalized Silicon & Lithography Coordination Protocol for Global Chip Companies",
+    "version": "1.0.0",
+    "domain": "qmoosa-chips.caffeine.ai",
+    "framework": "vite-react-motoko",
+    "tier": "enterprise-sovereign",
+    "inspiredBy": "Why Is China Hiding This Machine? (Global Lithography & Chip War Sovereignty)"
+  },
+  "runtime": {
+    "engine": "web4-agentic-symbiosis",
+    "canisterSync": true,
+    "onChainInference": {
+      "model": "qmoosa-silicon-slm-0.8b",
+      "canisterTarget": "qmoosa_chips_core",
+      "deterministicExecution": true
+    },
+    "protocols": [
+      "icp-canister-mesh",
+      "x402-bazaar-v1",
+      "conway-cellular-automaton",
+      "did-chip-provenance"
+    ]
+  },
+  "deployment": {
+    "target": "icp-mainnet",
+    "canisters": [
+      {
+        "name": "qmoosa_chips_core",
+        "type": "motoko",
+        "cycles": "2000000000000",
+        "memoryAllocation": "2GB"
+      },
+      {
+        "name": "x402_bazaar_canister",
+        "type": "motoko",
+        "cycles": "1500000000000",
+        "memoryAllocation": "1GB"
+      },
+      {
+        "name": "qmoosa_frontend",
+        "type": "assets",
+        "cycles": "500000000000"
+      }
+    ],
+    "cicd": {
+      "autoBuild": true,
+      "realityGateAudit": true,
+      "x402ComplianceCheck": true
+    }
+  },
+  "aiAgentics": {
+    "models": [
+      {
+        "id": "deepseek-coder",
+        "name": "DeepSeek Coder / V3",
+        "specialty": "RTL Synthesis, Verilog tape-out, silicon timing closure"
+      },
+      {
+        "id": "icp-onchain-slm",
+        "name": "ICP Canister Neural Engine",
+        "specialty": "Trustless on-chain wafer verification, Byzantine consensus"
+      },
+      {
+        "id": "claude-3-5-sonnet",
+        "name": "Claude 3.5 Sonnet",
+        "specialty": "Lithography optics, EUV mirror degradation, geopolitical supply chain"
+      },
+      {
+        "id": "gemini-2-0-pro",
+        "name": "Gemini 2.0 Pro",
+        "specialty": "Multi-agent orchestration, x402 Bazaar auction, multi-wallet settlement"
+      }
+    ]
+  }
+}

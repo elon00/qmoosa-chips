@@ -1,0 +1,12 @@
+{
+  "protocol": "QMoosa Chips",
+  "version": "1.0.0",
+  "timestamp": "2026-10-05T21:36:10.262Z",
+  "canisters": {
+    "core": "qmoosa_chips_core (rdmx6-jaaaa-aaaaa-aaadq-cai)",
+    "bazaar": "x402_bazaar_canister (rrkah-fqaaa-aaaaa-aaaaq-cai)",
+    "assets": "qmoosa_frontend (dist/)"
+  },
+  "pqcSpec": "NIST FIPS 204 (ML-DSA-65)",
+  "status": "END_TO_END_COMPLETED_SUCCESSFULLY"
+}

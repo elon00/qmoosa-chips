@@ -1,0 +1,166 @@
+[
+  {
+    "id": "asml",
+    "name": "ASML Holding N.V.",
+    "country": "Netherlands (Veldhoven)",
+    "role": "Photolithography Monopolist & Optical Systems",
+    "marketCap": "$380B",
+    "flagshipNodes": [
+      {
+        "name": "Twinscan EXE:5200 (High-NA EUV)",
+        "resolution": "0.55 NA (13.5nm wavelength)",
+        "throughputWph": 220,
+        "status": "Commercial Production",
+        "powerSource": "CO2 Laser Pulsed Tin Droplet Plasma (250W-500W)",
+        "chokepointRisk": "CRITICAL (Zero alternative non-Western supplier)"
+      },
+      {
+        "name": "Twinscan NXT:2100i (DUV Immersion)",
+        "resolution": "0.33 NA (193nm Argon Fluoride)",
+        "throughputWph": 295,
+        "status": "Export Restricted",
+        "powerSource": "Excimer Laser",
+        "chokepointRisk": "HIGH"
+      }
+    ],
+    "waferCapacityMonthly": "38,000 Tools Equivalent",
+    "sovereignStatus": "Western Export Control Subject",
+    "x402ResourceEndpoint": "/api/v1/x402/chips/asml/telemetry",
+    "x402QuoteCost": "0.008 ICP",
+    "canisterNode": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+  },
+  {
+    "id": "tsmc",
+    "name": "Taiwan Semiconductor Manufacturing Co. (TSMC)",
+    "country": "Taiwan (Hsinchu)",
+    "role": "Pure-Play Semiconductor Foundry Leader",
+    "marketCap": "$920B",
+    "flagshipNodes": [
+      {
+        "name": "N2 GAA (2nm Nanosheet)",
+        "resolution": "2nm (Gate-All-Around)",
+        "throughputWph": 180,
+        "status": "Volume Production 2025/2026",
+        "powerSource": "EUV High-NA Multi-Exposure",
+        "chokepointRisk": "GEOPOLITICAL (Strait Taiwan concentration)"
+      },
+      {
+        "name": "CoWoS-L Advanced Packaging",
+        "resolution": "3.3x Reticle Silicon Interposer",
+        "throughputWph": 45000,
+        "status": "High Demand (Nvidia Blackwell B200 / AMD MI300X)",
+        "powerSource": "Substrate Integration",
+        "chokepointRisk": "CRITICAL"
+      }
+    ],
+    "waferCapacityMonthly": "1,450,000 Wafers",
+    "sovereignStatus": "Silicon Shield Core",
+    "x402ResourceEndpoint": "/api/v1/x402/chips/tsmc/allocation",
+    "x402QuoteCost": "0.015 ICP",
+    "canisterNode": "rrkah-fqaaa-aaaaa-aaaaq-cai"
+  },
+  {
+    "id": "smic-smee",
+    "name": "SMIC & SMEE (Domestic Litho Alliance)",
+    "country": "China (Shanghai)",
+    "role": "Sovereign Domestic Silicon & Secret Lithography Development",
+    "marketCap": "$68B (State Backed)",
+    "flagshipNodes": [
+      {
+        "name": "SSMB Steady-State Microbunching (Secret EUV Accelerator)",
+        "resolution": "13.5nm EUV via Particle Accelerator Synchrotron",
+        "throughputWph": 310,
+        "status": "High-Security Prototype (Why China Hiding This Machine)",
+        "powerSource": "Tsinghua Tang-SSMB Electron Storage Ring",
+        "chokepointRisk": "SOVEREIGN DISRUPTION"
+      },
+      {
+        "name": "N+2 DUV Multi-Patterning (Kirin 9000s / 9100)",
+        "resolution": "7nm / 5nm Equivalent (SAQP Self-Aligned Quad)",
+        "throughputWph": 115,
+        "status": "Active Fab Output",
+        "powerSource": "ArFi Deep UV Quad Exposure",
+        "chokepointRisk": "Yield Limited (45-65%)"
+      }
+    ],
+    "waferCapacityMonthly": "820,000 Wafers (8-inch & 12-inch)",
+    "sovereignStatus": "Full Domestic Supply Chain Substitution",
+    "x402ResourceEndpoint": "/api/v1/x402/chips/smic/telemetry",
+    "x402QuoteCost": "0.010 ICP",
+    "canisterNode": "bkyz2-fmaaa-aaaaa-qaaaq-cai"
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA Corporation",
+    "country": "USA (Santa Clara)",
+    "role": "AI Accelerator & GPU Sovereign Architecture",
+    "marketCap": "$3,200B",
+    "flagshipNodes": [
+      {
+        "name": "Blackwell B200 (Dual-Die 208B Transistors)",
+        "resolution": "TSMC 4NP Custom Node",
+        "throughputWph": 0,
+        "status": "Global Hyperscaler Deployment",
+        "powerSource": "1000W-1200W TDP per Board",
+        "chokepointRisk": "Packaging & HBM3e Interconnects"
+      },
+      {
+        "name": "Rubin R100 Ultra AI Platform",
+        "resolution": "TSMC 3nm GAA + HBM4",
+        "throughputWph": 0,
+        "status": "Tape-Out Complete",
+        "powerSource": "NVLink 6 Optical Switch",
+        "chokepointRisk": "US BIS Export Control Restrictions"
+      }
+    ],
+    "waferCapacityMonthly": "Fabless (TSMC Largest Customer)",
+    "sovereignStatus": "US Export Control Anchor",
+    "x402ResourceEndpoint": "/api/v1/x402/chips/nvidia/compute-quote",
+    "x402QuoteCost": "0.025 ICP",
+    "canisterNode": "uv56a-2yaaa-aaaaa-caaaa-cai"
+  },
+  {
+    "id": "intel",
+    "name": "Intel Corporation / IFS",
+    "country": "USA (Santa Clara & Ohio Fab 52)",
+    "role": "Integrated Device Manufacturer & Sovereign US Foundry",
+    "marketCap": "$110B",
+    "flagshipNodes": [
+      {
+        "name": "Intel 18A (RibbonFET + PowerVia)",
+        "resolution": "1.8nm Equivalent",
+        "throughputWph": 165,
+        "status": "High-NA EUV First Adopter (EXE:5000)",
+        "powerSource": "Backside Power Delivery Network",
+        "chokepointRisk": "Yield Ramp Execution"
+      }
+    ],
+    "waferCapacityMonthly": "950,000 Wafers",
+    "sovereignStatus": "US CHIPS Act Primary Recipient ($8.5B Direct)",
+    "x402ResourceEndpoint": "/api/v1/x402/chips/intel/node-verification",
+    "x402QuoteCost": "0.012 ICP",
+    "canisterNode": "w4y2k-niaaa-aaaaa-eaaaa-cai"
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung Electronics (DS Foundry)",
+    "country": "South Korea (Suwon & Pyeongtaek)",
+    "role": "Memory Titan (HBM3e/HBM4) & GAA Foundry Rival",
+    "marketCap": "$360B",
+    "flagshipNodes": [
+      {
+        "name": "SF2 (2nm Multi-Bridge-Channel FET)",
+        "resolution": "2nm GAA",
+        "throughputWph": 175,
+        "status": "Sampling to Tier-1 Customers",
+        "powerSource": "Dual-Patterning EUV",
+        "chokepointRisk": "Customer Diversification"
+      }
+    ],
+    "waferCapacityMonthly": "1,800,000 Wafers",
+    "sovereignStatus": "South Korea K-Chips Act Pillar",
+    "x402ResourceEndpoint": "/api/v1/x402/chips/samsung/memory-yield",
+    "x402QuoteCost": "0.011 ICP",
+    "canisterNode": "x5k8l-3aaaa-aaaaa-faaaa-cai"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "canisters": {
+    "qmoosa_chips_core": {
+      "main": "canisters/qmoosa_chips_core/src/main.mo",
+      "type": "motoko"
+    },
+    "x402_bazaar_canister": {
+      "main": "canisters/x402_bazaar_canister/src/main.mo",
+      "type": "motoko"
+    },
+    "qmoosa_frontend": {
+      "dependencies": [
+        "qmoosa_chips_core",
+        "x402_bazaar_canister"
+      ],
+      "frontend": {
+        "entrypoint": "dist/index.html"
+      },
+      "source": [
+        "dist"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": [
+        "https://ic0.app"
+      ],
+      "type": "persistent"
+    }
+  }
+}

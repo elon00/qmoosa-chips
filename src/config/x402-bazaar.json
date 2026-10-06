@@ -1,0 +1,128 @@
+{
+  "x402Version": "1.0.0",
+  "version": "1.0.0",
+  "name": "QMoosa Chips — Global Silicon & Lithography x402 Bazaar Protocol",
+  "type": "silicon-bazaar-orchestrator",
+  "category": "semiconductor-coordination",
+  "description": "Autonomous Agent Commerce Protocol synchronising global chip companies, EUV lithography allocation, Conway automaton wafer yield simulation, and multi-rail settlements.",
+  "lastUpdated": "2026-10-06T00:00:00Z",
+  "tags": [
+    "x402-bazaar",
+    "icp-protocol",
+    "caffeine-ai",
+    "global-chips",
+    "euv-lithography",
+    "asml",
+    "tsmc",
+    "conway-automaton",
+    "web4",
+    "multi-wallet",
+    "upi",
+    "crypto-fiat"
+  ],
+  "provider": {
+    "name": "QMoosa Silicon Labs & Caffeine.ai",
+    "website": "https://qmoosa-chips.caffeine.ai",
+    "payTo": {
+      "icp": "e2f187a4192bc9da8debc81e3a6ef0e1215b4971c5ef941165bcba1198bf681c",
+      "eth": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+      "sol": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+      "upi": "qmoosa.chips@icp",
+      "sepaIban": "NL91BUNQ2051283941"
+    },
+    "network": "icp-mainnet",
+    "caip2": "icp:mng5q-4aaaa-aaaah-qcjbq-cai"
+  },
+  "facilitator": {
+    "url": "https://x402.caffeine.ai/gateway",
+    "heartbeat": 15,
+    "syncMode": "bidirectional-p2p",
+    "pqcSpecification": "NIST FIPS 204 (ML-DSA-65) & ICP-Threshold-ECDSA",
+    "challengeTag": "qmoosa-x402-silicon-sovereignty"
+  },
+  "primaryEndpoint": {
+    "path": "/api/v1/x402/bazaar/catalog",
+    "resource": "/api/v1/x402/bazaar/catalog",
+    "method": "GET",
+    "type": "http",
+    "accepts": ["ICP", "ckBTC", "USDC", "ETH", "SOL", "UPI"],
+    "pricing": {
+      "costIcp": 0.005,
+      "costUsdc": 0.05,
+      "costUpiInr": 4.5,
+      "currency": "ICP"
+    }
+  },
+  "resources": [
+    {
+      "resource": "/api/v1/x402/chips/telemetry/aggregate",
+      "path": "/api/v1/x402/chips/telemetry/aggregate",
+      "name": "Global Fabs Telemetry & Node Yield Matrix",
+      "type": "http",
+      "method": "POST",
+      "accepts": ["ICP", "ckBTC", "USDC"],
+      "pricing": {
+        "ICP": 0.010,
+        "ckBTC": 0.00000025,
+        "USDC": 0.10
+      },
+      "description": "Real-time telemetry across ASML, TSMC, Intel, SMIC, and Samsung fabs with yield, defect density, and wafer allocation."
+    },
+    {
+      "resource": "/api/v1/x402/chips/asml/high-na-telemetry",
+      "path": "/api/v1/x402/chips/asml/high-na-telemetry",
+      "name": "ASML High-NA EUV Twinscan EXE Beam Telemetry",
+      "type": "http",
+      "method": "POST",
+      "accepts": ["ICP", "USDC", "UPI"],
+      "pricing": {
+        "ICP": 0.015,
+        "USDC": 0.15,
+        "UPI": 12.50
+      },
+      "description": "Anamorphic optics 0.55 NA, tin droplet laser plasma pulse frequency, and mirror degradation logs."
+    },
+    {
+      "resource": "/api/v1/x402/chips/smic/ssmb-light-pulse",
+      "path": "/api/v1/x402/chips/smic/ssmb-light-pulse",
+      "name": "SSMB Synchrotron Secret Accelerator Lithography Pulse",
+      "type": "http",
+      "method": "POST",
+      "accepts": ["ICP", "ckBTC", "SOL"],
+      "pricing": {
+        "ICP": 0.020,
+        "SOL": 0.0015,
+        "ckBTC": 0.0000005
+      },
+      "description": "Particle accelerator Steady-State Microbunching (SSMB) synchrotron EUV telemetry (reference to 'Why Is China Hiding This Machine?')."
+    },
+    {
+      "resource": "/api/v1/x402/chips/conway/yield-simulation",
+      "path": "/api/v1/x402/chips/conway/yield-simulation",
+      "name": "Conway Cellular Automaton Silicon Defect Matrix Run",
+      "type": "http",
+      "method": "POST",
+      "accepts": ["ICP", "USDC", "ETH", "UPI"],
+      "pricing": {
+        "ICP": 0.008,
+        "USDC": 0.08,
+        "UPI": 7.00
+      },
+      "description": "Execute 2D/3D cellular automata wafer defect propagation, Murphy-Poisson yield curve modeling, and mask inspection."
+    },
+    {
+      "resource": "/api/v1/x402/chips/agent/verilog-synthesis",
+      "path": "/api/v1/x402/chips/agent/verilog-synthesis",
+      "name": "Multi-Model AI Agentics RTL Tape-Out & Verification",
+      "type": "http",
+      "method": "POST",
+      "accepts": ["ICP", "ckBTC", "USDC"],
+      "pricing": {
+        "ICP": 0.025,
+        "USDC": 0.25,
+        "ckBTC": 0.00000075
+      },
+      "description": "Autonomous multi-model synthesis combining DeepSeek Coder, Claude 3.5 Sonnet, and ICP on-chain neural consensus."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+apiVersion: caffeine.ai/v1alpha1
+kind: SovereignApplicationMesh
+metadata:
+  name: qmoosa-chips
+  namespace: global-semiconductor-grid
+  labels:
+    protocol: icp
+    subsystem: lithography-coordination
+    standard: x402-bazaar
+spec:
+  architecture:
+    type: Web4-Agentic
+    edgeComputing: true
+    quantumResistant: true
+    consensus: ICP-Threshold-BLS
+  semiconductorFabs:
+    nodes:
+      - id: asml-euv-twinscan
+        type: Lithography-EUV
+        na: 0.55
+        wavelength_nm: 13.5
+      - id: tsmc-fab20-hsinchu
+        type: Foundry-2nm-GAA
+      - id: smic-smee-domestic
+        type: Lithography-SSMB-DUV-MultiPattern
+      - id: intel-fab52-ohio
+        type: Foundry-18A-RibbonFET
+      - id: samsung-giheung
+        type: Foundry-3nm-MBCFET
+  automatonEngine:
+    name: conway-wafer-defect-simulator
+    rules: "B3/S23"
+    dimensions: [64, 64]
+    yieldModel: "Murphy-Poisson-Hybrid"
+  commerceProtocol:
+    type: x402-bazaar
+    specification: "HTTP 402 AI Agent Commerce"
+    syncIntervalSec: 15
+    currencies:
+      - ICP
+      - ckBTC
+      - USDC
+      - ETH
+      - SOL
+      - UPI
+      - SEPA

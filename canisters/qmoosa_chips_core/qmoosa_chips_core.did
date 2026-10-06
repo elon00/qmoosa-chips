@@ -1,0 +1,39 @@
+type ChipCompany = record {
+  id: text;
+  name: text;
+  country: text;
+  role: text;
+  marketCap: text;
+  waferCapacityMonthly: text;
+  yieldPercentage: nat;
+  defectDensityD0: text;
+  sovereignStatus: text;
+  lastUpdateEpoch: int;
+};
+
+type WaferVerificationProof = record {
+  chipDid: text;
+  companyId: text;
+  nodeName: text;
+  defectCount: nat;
+  yieldScore: nat;
+  conwayStateHash: text;
+  verifiedBy: principal;
+  timestamp: int;
+};
+
+type ProtocolStatus = record {
+  protocolName: text;
+  version: text;
+  totalFabs: nat;
+  verifiedProofsCount: nat;
+  caffeineMeshSynced: bool;
+};
+
+service : {
+  getChipCompanies: () -> (vec ChipCompany) query;
+  updateCompanyYield: (text, nat, text) -> (bool);
+  registerWaferProof: (text, text, text, nat, nat, text, principal) -> (WaferVerificationProof);
+  getWaferProofs: () -> (vec WaferVerificationProof) query;
+  getProtocolStatus: () -> (ProtocolStatus) query;
+}

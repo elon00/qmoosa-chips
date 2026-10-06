@@ -1,0 +1,30 @@
+type PaymentQuote = record {
+  quoteId: text;
+  resourcePath: text;
+  requiredCurrency: text;
+  amountE8s: nat;
+  payToAddress: text;
+  nonce: text;
+  expiresAt: int;
+  status: text;
+};
+
+type SettlementReceipt = record {
+  receiptId: text;
+  quoteId: text;
+  payerPrincipal: principal;
+  payerAddress: text;
+  amountPaid: nat;
+  currency: text;
+  txHash: text;
+  authBearerToken: text;
+  settledAt: int;
+};
+
+service : {
+  create402Quote: (text, text, nat, text) -> (PaymentQuote);
+  settle402Payment: (text, text, text, principal) -> (opt SettlementReceipt);
+  verifyAuthToken: (text) -> (bool) query;
+  getSettlements: () -> (vec SettlementReceipt) query;
+  getActiveQuotes: () -> (vec PaymentQuote) query;
+}
