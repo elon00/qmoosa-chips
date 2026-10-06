@@ -62,6 +62,32 @@ runTest('Verify chips-companies.json contains ASML, TSMC and SMIC/SMEE SSMB', ()
   assert.ok(smic.flagshipNodes.some(n => n.name.includes('SSMB')), 'SMIC must mention SSMB machine');
 });
 
+runTest('Verify marketplace-products.json catalog and market price differentials', () => {
+  const prodPath = path.resolve('src/config/marketplace-products.json');
+  assert.ok(fs.existsSync(prodPath), 'marketplace-products.json must exist');
+  const prods = JSON.parse(fs.readFileSync(prodPath, 'utf8'));
+  assert.ok(prods.length >= 8, 'Must have at least 8 marketplace products');
+  
+  const quantum = prods.filter(p => p.category === 'quantum-computers');
+  const laptops = prods.filter(p => p.category === 'super-laptops');
+  const gadgets = prods.filter(p => p.category === 'silicon-valley-gadgets');
+  const accessories = prods.filter(p => p.category === 'accessories');
+
+  assert.ok(quantum.length >= 2, 'Must include quantum computers');
+  assert.ok(laptops.length >= 2, 'Must include super laptops');
+  assert.ok(gadgets.length >= 2, 'Must include gadgets');
+  assert.ok(accessories.length >= 2, 'Must include accessories');
+
+  // Verify price comparison fields
+  prods.forEach(p => {
+    assert.ok(typeof p.usaPriceUsd === 'number', `${p.name} must have usaPriceUsd`);
+    assert.ok(typeof p.chinaPriceCny === 'number', `${p.name} must have chinaPriceCny`);
+    assert.ok(typeof p.chinaPriceUsdEquivalent === 'number', `${p.name} must have chinaPriceUsdEquivalent`);
+    assert.ok(typeof p.priceDifferencePercent === 'number', `${p.name} must have priceDifferencePercent`);
+    assert.ok(p.distributorPricing && p.distributorPricing.moq >= 1, `${p.name} must have distributorPricing MOQ`);
+  });
+});
+
 // 2. Logic & Math Tests
 runTest('Conway Automaton Wafer Yield Equations (Poisson & Murphy)', () => {
   // Test math for 36x36 wafer grid

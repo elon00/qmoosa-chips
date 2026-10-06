@@ -136,6 +136,9 @@ export class MultiModelAgent {
     } else if (lower.includes('conway') || lower.includes('automaton') || lower.includes('wafer') || lower.includes('yield') || lower.includes('defect')) {
       toolToCall = 'run_conway_simulation';
       toolParams.steps = 10;
+    } else if (lower.includes('price') || lower.includes('market') || lower.includes('compare') || lower.includes('gadget') || lower.includes('laptop') || lower.includes('quantum') || lower.includes('amazon') || lower.includes('cost')) {
+      toolToCall = 'compare_market_prices';
+      toolParams.query = lower.includes('laptop') ? 'laptop' : lower.includes('quantum') ? 'quantum' : lower.includes('gadget') ? 'gadget' : '';
     } else if (lower.includes('qr') || lower.includes('upi') || lower.includes('pay') || lower.includes('wallet') || lower.includes('fiat') || lower.includes('crypto')) {
       toolToCall = 'generate_payment_qr';
       if (lower.includes('upi')) toolParams.rail = 'UPI';
@@ -156,7 +159,14 @@ export class MultiModelAgent {
     // Synthesize response based on the active model
     const currentProfile = AI_MODELS[this.activeModel];
 
-    if (toolToCall === 'explain_hidden_machine_video') {
+    if (toolToCall === 'compare_market_prices') {
+      agentResponseText = `**[${currentProfile.name}] Global Semiconductor & Quantum Market Analysis:**\n\n` +
+        `${toolResult?.summary}\n\n` +
+        `**Key Economic Drivers:**\n` +
+        `- **US Market (Silicon Valley):** High domestic design margins, export license controls on advanced dual-use QPUs & RTX 5090 chips.\n` +
+        `- **Chinese Market (Shenzhen / Hefei):** Subsidized domestic manufacturing (Origin Quantum & Kirin AI), 15-38% price advantage on domestic supply chains, but subject to Western export blocks.\n` +
+        `- **Distributor Wholesale:** Authorized distributors can access up to 35% bulk discounts (MOQ applied) with dual-rail fiat & crypto settlement via QMoosa Prime.`;
+    } else if (toolToCall === 'explain_hidden_machine_video') {
       agentResponseText = `### 🔍 Analysis of "Why Is China Hiding This Machine?"\n\n` +
         `The video details the critical chokepoint in the global semiconductor race. ASML holds a global monopoly on High-NA EUV lithography machines ($380M+ per tool) using pulsed CO2 lasers on molten tin droplets. Under Western export restrictions, China was barred from purchasing EUV tools.\n\n` +
         `**The Secret Breakthrough:** Researchers at Tsinghua University developed **Steady-State Microbunching (SSMB)**—using an electron storage ring (particle accelerator synchrotron) as a continuous, high-power 13.5nm EUV radiation source. Instead of tiny laser-plasma sources, an entire accelerator facility can radiate intense EUV beams into multiple lithography steppers simultaneously.\n\n` +

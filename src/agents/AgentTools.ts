@@ -4,6 +4,7 @@
  */
 
 import chipsCompanies from '../config/chips-companies.json';
+import marketplaceProducts from '../config/marketplace-products.json';
 import { X402BazaarClient } from '../x402/X402BazaarClient';
 import { DynamicQRGenerator, PaymentRail } from '../wallet/DynamicQRGenerator';
 import { ConwayEngine } from '../automaton/ConwayEngine';
@@ -87,6 +88,25 @@ export class AgentTools {
           success: true,
           data: qr,
           summary: `Generated dynamic ${rail} QR code for ${qr.displayAmount} (Address: ${qr.recipientAddress.substring(0, 16)}...).`
+        };
+      }
+
+      case 'compare_market_prices': {
+        const query = (params.query || '').toLowerCase();
+        const found = marketplaceProducts.filter(p =>
+          p.name.toLowerCase().includes(query) ||
+          p.category.toLowerCase().includes(query) ||
+          p.brand.toLowerCase().includes(query)
+        );
+        const results = found.length > 0 ? found : marketplaceProducts.slice(0, 3);
+        const summaries = results.map(r =>
+          `${r.name}: USA $${r.usaPriceUsd.toLocaleString()} vs China ¥${r.chinaPriceCny.toLocaleString()} ($${r.chinaPriceUsdEquivalent.toLocaleString()}) [${r.priceAdvantage}]`
+        ).join('\n');
+        return {
+          tool: 'compare_market_prices',
+          success: true,
+          data: results,
+          summary: `Price Comparison:\n${summaries}`
         };
       }
 

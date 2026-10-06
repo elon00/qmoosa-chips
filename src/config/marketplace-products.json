@@ -1,0 +1,464 @@
+[
+  {
+    "id": "prod-origin-wukong-72",
+    "name": "Origin Quantum Wukong 72-Qubit Superconducting Quantum System",
+    "brand": "Origin Quantum (Hefei / China)",
+    "category": "quantum-computers",
+    "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop&q=60",
+    "badge": "Chinese Sovereign Tech",
+    "description": "Full-stack indigenous 72-qubit superconducting quantum computer with automated cryostat (10mK), quantum chip packaging, and distributed quantum compiler.",
+    "specs": {
+      "Qubits": "72 Superconducting Transmon Qubits",
+      "Operating Temp": "10 mK (Dilution Refrigerator)",
+      "Coherence Time (T1)": "68 μs average",
+      "Gate Fidelity": "99.82% 1-qubit, 99.2% 2-qubit",
+      "Compiler": "QPanda & Origin Quantum Cloud",
+      "Power Req": "380V 3-Phase 15kW"
+    },
+    "usaPriceUsd": 2450000,
+    "chinaPriceCny": 11800000,
+    "chinaPriceUsdEquivalent": 1629834,
+    "globalAverageUsd": 2100000,
+    "priceDifferencePercent": -33.5,
+    "priceAdvantage": "China 33.5% Cheaper (Domestic Quantum Subsidies)",
+    "exportControlStatus": "US BIS Entity List Restricted / China National Strategic",
+    "distributorPricing": {
+      "moq": 1,
+      "wholesaleDiscountPercent": 15,
+      "buyerRole": "Government & Research Labs",
+      "leadTimeWeeks": 12
+    },
+    "shipping": {
+      "usaShippingDays": 45,
+      "chinaShippingDays": 7,
+      "customsClearance": "High Security Export License Required"
+    },
+    "rating": 4.9,
+    "reviewsCount": 18,
+    "inStock": true,
+    "stockQty": 4
+  },
+  {
+    "id": "prod-ionq-forte-enterprise",
+    "name": "IonQ Forte Enterprise Trapped-Ion Commercial Quantum Server",
+    "brand": "IonQ (College Park, Maryland / USA)",
+    "category": "quantum-computers",
+    "image": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&auto=format&fit=crop&q=60",
+    "badge": "Silicon Valley Choice",
+    "description": "Rack-mounted 35 algorithmic qubits (AQ #35) trapped-ion quantum computer engineered for enterprise data centers with room-temperature vacuum trap.",
+    "specs": {
+      "Qubits": "35 #AQ Algorithmic Trapped-Ion Qubits",
+      "Form Factor": "Dual 19-inch 42U Data Center Rack",
+      "Laser Train": "Ultra-stable pulsed 355nm UV laser",
+      "Connectivity": "All-to-All Qubit Entanglement",
+      "Cloud SDK": "Qiskit, Cirq, AWS Braket, Azure Quantum",
+      "Cooling": "Room Temperature Laser-Cooled Ytterbium Ions"
+    },
+    "usaPriceUsd": 3200000,
+    "chinaPriceCny": 28500000,
+    "chinaPriceUsdEquivalent": 3936464,
+    "globalAverageUsd": 3500000,
+    "priceDifferencePercent": 23.0,
+    "priceAdvantage": "USA 23.0% Cheaper (Domestic US Sourced)",
+    "exportControlStatus": "US DOC EAR99 Dual-Use Export Controlled",
+    "distributorPricing": {
+      "moq": 1,
+      "wholesaleDiscountPercent": 12,
+      "buyerRole": "Global Datacenters & Defense",
+      "leadTimeWeeks": 16
+    },
+    "shipping": {
+      "usaShippingDays": 5,
+      "chinaShippingDays": 60,
+      "customsClearance": "US Commerce BIS Authorization Required"
+    },
+    "rating": 4.8,
+    "reviewsCount": 24,
+    "inStock": true,
+    "stockQty": 2
+  },
+  {
+    "id": "prod-qmoosa-shor256-coprocessor",
+    "name": "QMoosa Shor-256 Quantum Cryptographic Co-Processor",
+    "brand": "QMoosa Quantum Systems (ICP Protocol / Web 4.0)",
+    "category": "quantum-computers",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60",
+    "badge": "Web 4.0 Quantum Key",
+    "description": "On-chip quantum co-processor for post-quantum lattice verification and simulated Shor-algorithm factorization acceleration, interfaced via ICP smart canisters.",
+    "specs": {
+      "Architecture": "256 Cryogenic Quantum Gates",
+      "Interface": "PCIe 5.0 x16 + QSFP-DD Optical Link",
+      "PQC Engine": "NIST FIPS 204 (ML-DSA-65) & FIPS 203 (ML-KEM-768)",
+      "Canister Sync": "ICP Threshold-ECDSA Direct Anchor",
+      "Throughput": "18,000 PQC ops/sec",
+      "Power": "75W TDP"
+    },
+    "usaPriceUsd": 45000,
+    "chinaPriceCny": 298000,
+    "chinaPriceUsdEquivalent": 41160,
+    "globalAverageUsd": 44000,
+    "priceDifferencePercent": -8.5,
+    "priceAdvantage": "Neutral Parity across Global Web4 Nodes",
+    "exportControlStatus": "Decentralized PQC Standard / Open Web4",
+    "distributorPricing": {
+      "moq": 5,
+      "wholesaleDiscountPercent": 22,
+      "buyerRole": "Cryptographic Hardware Distributors",
+      "leadTimeWeeks": 2
+    },
+    "shipping": {
+      "usaShippingDays": 3,
+      "chinaShippingDays": 5,
+      "customsClearance": "Instant Digital Canister Bond"
+    },
+    "rating": 5.0,
+    "reviewsCount": 42,
+    "inStock": true,
+    "stockQty": 35
+  },
+  {
+    "id": "prod-spinq-gemini-desktop",
+    "name": "SpinQ Gemini Desktop NMR Quantum Computer",
+    "brand": "SpinQ Technology (Shenzhen / China)",
+    "category": "quantum-computers",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=60",
+    "badge": "Amazon's Choice",
+    "description": "Desktop room-temperature 2-qubit Nuclear Magnetic Resonance (NMR) quantum computer for university labs, developers, and quantum software prototyping.",
+    "specs": {
+      "Qubits": "2 True Physical Qubits (Phosphorus-31 NMR)",
+      "Operating Temp": "Room Temperature (No Cryo Required)",
+      "Weight": "44 kg Desktop Chasis",
+      "Software": "SpinQit Quantum SDK & Python API",
+      "Algorithms": "Grover Search, Deutsch-Jozsa, Quantum Teleportation"
+    },
+    "usaPriceUsd": 12900,
+    "chinaPriceCny": 58000,
+    "chinaPriceUsdEquivalent": 8011,
+    "globalAverageUsd": 11500,
+    "priceDifferencePercent": -37.9,
+    "priceAdvantage": "China 37.9% Cheaper (Shenzhen Direct Factory)",
+    "exportControlStatus": "Civilian Educational / Free Export",
+    "distributorPricing": {
+      "moq": 3,
+      "wholesaleDiscountPercent": 25,
+      "buyerRole": "Universities & STEM Distributors",
+      "leadTimeWeeks": 1
+    },
+    "shipping": {
+      "usaShippingDays": 6,
+      "chinaShippingDays": 2,
+      "customsClearance": "Standard Air Express"
+    },
+    "rating": 4.7,
+    "reviewsCount": 86,
+    "inStock": true,
+    "stockQty": 18
+  },
+  {
+    "id": "prod-apex-titan-super-laptop",
+    "name": "Titan Apex Extreme AI Super Laptop (Dual RTX 5090 Max-P + AMD 9950X3D)",
+    "brand": "Silicon Valley Apex Systems (San Jose, CA)",
+    "category": "super-laptops",
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=60",
+    "badge": "Silicon Valley Best Seller",
+    "description": "The world's most powerful portable AI workstation laptop with dual liquid-metal cooled RTX 5090 Ada GPUs, 192GB DDR5 ECC RAM, and local 70B LLM inference.",
+    "specs": {
+      "Processor": "AMD Ryzen 9 9950X3D (16-Core, 32-Thread 3D V-Cache)",
+      "Graphics": "Dual NVIDIA RTX 5090 32GB GDDR7 (64GB Total VRAM)",
+      "Memory": "192GB DDR5-6400 ECC SODIMM",
+      "Storage": "16TB NVMe Gen5 SSD (14,000 MB/s)",
+      "Display": "18.0-inch 4K OLED 240Hz 100% DCI-P3 HDR1000",
+      "Cooling": "Vapor Chamber with Dual External Quick-Disconnect Liquid Loop"
+    },
+    "usaPriceUsd": 8499,
+    "chinaPriceCny": 74500,
+    "chinaPriceUsdEquivalent": 10290,
+    "globalAverageUsd": 9200,
+    "priceDifferencePercent": 21.1,
+    "priceAdvantage": "USA 21.1% Cheaper (Silicon Valley Direct Assembly)",
+    "exportControlStatus": "US BIS RTX 5090 Export License Required for China/Middle East",
+    "distributorPricing": {
+      "moq": 5,
+      "wholesaleDiscountPercent": 18,
+      "buyerRole": "Enterprise AI Labs & Game Studios",
+      "leadTimeWeeks": 2
+    },
+    "shipping": {
+      "usaShippingDays": 2,
+      "chinaShippingDays": 14,
+      "customsClearance": "US Commerce ECCN 3A090 Audit"
+    },
+    "rating": 4.9,
+    "reviewsCount": 112,
+    "inStock": true,
+    "stockQty": 22
+  },
+  {
+    "id": "prod-kirin-quantum-neuralbook",
+    "name": "Sovereign Kirin-Quantum AI NeuralBook (Octa-NPU 120 TOPS)",
+    "brand": "Sovereign Silicon Alliance (Shanghai / China)",
+    "category": "super-laptops",
+    "image": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=60",
+    "badge": "Chinese Sovereign Tech",
+    "description": "First sovereign ARM-RISC-V hybrid AI laptop powered by 5nm multi-patterned Kirin silicon with built-in hardware DeepSeek-V3 acceleration matrix.",
+    "specs": {
+      "Processor": "Kirin 9100s Sovereign Silicon Octa-Core",
+      "NPU Acceleration": "120 TOPS Dedicated Neural Tensor Cores",
+      "Memory": "64GB LPDDR5X Unified High-Bandwidth Memory",
+      "Storage": "4TB PCIe Gen4 Sovereign SSD",
+      "OS": "OpenEuler / HarmonyOS PC Enterprise",
+      "Battery": "99.9 Wh Lithium-Polymer (22 Hours AI Workload)"
+    },
+    "usaPriceUsd": 3200,
+    "chinaPriceCny": 14999,
+    "chinaPriceUsdEquivalent": 2071,
+    "globalAverageUsd": 2700,
+    "priceDifferencePercent": -35.3,
+    "priceAdvantage": "China 35.3% Cheaper (No Western License Markup)",
+    "exportControlStatus": "China Domestic Market Priority",
+    "distributorPricing": {
+      "moq": 10,
+      "wholesaleDiscountPercent": 20,
+      "buyerRole": "Global Asian Distributors",
+      "leadTimeWeeks": 1
+    },
+    "shipping": {
+      "usaShippingDays": 12,
+      "chinaShippingDays": 2,
+      "customsClearance": "Direct Shenzhen Export"
+    },
+    "rating": 4.8,
+    "reviewsCount": 230,
+    "inStock": true,
+    "stockQty": 45
+  },
+  {
+    "id": "prod-apple-m4-max-extreme",
+    "name": "Apple MacBook Pro 16 Extreme M4 Max (128GB Unified Memory)",
+    "brand": "Apple (Cupertino, CA / USA)",
+    "category": "super-laptops",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=60",
+    "badge": "Amazon's Choice",
+    "description": "TSMC 3nm-fabricated powerhouse featuring 16-core CPU, 40-core GPU, and 16-core Neural Engine for local transformer model fine-tuning.",
+    "specs": {
+      "Processor": "Apple M4 Max (16 CPU cores, 40 GPU cores)",
+      "Memory": "128GB Unified Memory (546 GB/s memory bandwidth)",
+      "Storage": "8TB SSD",
+      "Display": "16.2-inch Liquid Retina XDR (1600 nits peak)",
+      "Neural Engine": "38 Trillion Operations/Second",
+      "Ports": "Three Thunderbolt 5 ports (120 Gb/s)"
+    },
+    "usaPriceUsd": 7199,
+    "chinaPriceCny": 56999,
+    "chinaPriceUsdEquivalent": 7872,
+    "globalAverageUsd": 7600,
+    "priceDifferencePercent": 9.3,
+    "priceAdvantage": "USA 9.3% Cheaper (US MSRP vs China 13% VAT)",
+    "exportControlStatus": "Global Commercial / Open Retail",
+    "distributorPricing": {
+      "moq": 10,
+      "wholesaleDiscountPercent": 8,
+      "buyerRole": "Authorized Apple Resellers",
+      "leadTimeWeeks": 1
+    },
+    "shipping": {
+      "usaShippingDays": 1,
+      "chinaShippingDays": 3,
+      "customsClearance": "Standard Consumer Electronic"
+    },
+    "rating": 4.9,
+    "reviewsCount": 540,
+    "inStock": true,
+    "stockQty": 60
+  },
+  {
+    "id": "prod-asml-highna-mirror-rig",
+    "name": "ASML High-NA EUV Mirror Optical Alignment & Diagnostic Rig",
+    "brand": "ASML / Zeiss SMT (Veldhoven / Netherlands)",
+    "category": "silicon-valley-gadgets",
+    "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=60",
+    "badge": "Foundry Equipment",
+    "description": "Laser-interferometric picometer-precision optical scanner for High-NA EUV 0.55 NA anamorphic mirrors and multilayer molybdenum/silicon degradation checks.",
+    "specs": {
+      "Accuracy": "±3 picometers wavefront error measurement",
+      "Laser Source": "Deep UV 193nm phase-shifting interferometer",
+      "Vacuum Rating": "10^-9 mbar Extreme Ultra-High Vacuum",
+      "Compatibility": "ASML Twinscan EXE:5000 & EXE:5200",
+      "Optics": "Carl Zeiss SMT Certified Calibration Module"
+    },
+    "usaPriceUsd": 890000,
+    "chinaPriceCny": 10200000,
+    "chinaPriceUsdEquivalent": 1408839,
+    "globalAverageUsd": 950000,
+    "priceDifferencePercent": 58.3,
+    "priceAdvantage": "Western Markets 58.3% Cheaper (Export Sanction Premium in Asia)",
+    "exportControlStatus": "Wassenaar Arrangement Category 3B001 Strictly Controlled",
+    "distributorPricing": {
+      "moq": 1,
+      "wholesaleDiscountPercent": 5,
+      "buyerRole": "Tier-1 Semiconductor Foundries",
+      "leadTimeWeeks": 20
+    },
+    "shipping": {
+      "usaShippingDays": 10,
+      "chinaShippingDays": 90,
+      "customsClearance": "Government Strategic Export License"
+    },
+    "rating": 5.0,
+    "reviewsCount": 7,
+    "inStock": true,
+    "stockQty": 3
+  },
+  {
+    "id": "prod-neuralink-telepathy-devkit",
+    "name": "Neuralink Telepathy Brain-Computer Interface (BCI) Developer Rig",
+    "brand": "Neuralink Systems (Fremont, CA / USA)",
+    "category": "silicon-valley-gadgets",
+    "image": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800&auto=format&fit=crop&q=60",
+    "badge": "Silicon Valley Exclusive",
+    "description": "Non-implantable 1024-channel micro-electrode wireless neural telemetry development kit for real-time motor cortex decoders and spatial AI computing.",
+    "specs": {
+      "Channels": "1024 High-Density Neural Telemetry Channels",
+      "Sampling Rate": "30 kHz per channel at 12-bit resolution",
+      "Wireless": "Ultra-Low Power Custom BLE + Sub-GHz RF",
+      "Inductive Charging": "Qi2 Fast Resonance 5W",
+      "SDK": "Neuralink Python SDK & Web4 Canister Relay"
+    },
+    "usaPriceUsd": 18500,
+    "chinaPriceCny": 185000,
+    "chinaPriceUsdEquivalent": 25552,
+    "globalAverageUsd": 210000,
+    "priceDifferencePercent": 38.1,
+    "priceAdvantage": "USA 38.1% Cheaper (Silicon Valley Direct Lab Access)",
+    "exportControlStatus": "FDA / NIH Investigative Device Exemption",
+    "distributorPricing": {
+      "moq": 2,
+      "wholesaleDiscountPercent": 15,
+      "buyerRole": "Neuroscience Institutes & Biotech Labs",
+      "leadTimeWeeks": 4
+    },
+    "shipping": {
+      "usaShippingDays": 3,
+      "chinaShippingDays": 25,
+      "customsClearance": "Biomedical Equipment Declaration"
+    },
+    "rating": 4.9,
+    "reviewsCount": 38,
+    "inStock": true,
+    "stockQty": 12
+  },
+  {
+    "id": "prod-fips204-pqc-hsm",
+    "name": "QMoosa Quantum-Resistant FIPS-204 Post-Quantum HSM Key",
+    "brand": "QMoosa Shield (ICP Protocol / Web 4.0)",
+    "category": "silicon-valley-gadgets",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=60",
+    "badge": "Amazon's Choice",
+    "description": "Tamper-evident post-quantum hardware security module with true physical quantum random number generator (QRNG) and on-card ML-DSA-65 signatures.",
+    "specs": {
+      "Algorithms": "NIST ML-DSA-65, ML-KEM-768, SLH-DSA",
+      "Randomness": "Photonic True Quantum RNG (1 Gbps)",
+      "Interface": "USB-C / NFC / ICP Canister WebAuthn",
+      "Security": "Common Criteria EAL6+ Certified Silicon",
+      "Form Factor": "Titanium CNC Water-Resistant Key"
+    },
+    "usaPriceUsd": 499,
+    "chinaPriceCny": 3200,
+    "chinaPriceUsdEquivalent": 442,
+    "globalAverageUsd": 480,
+    "priceDifferencePercent": -11.4,
+    "priceAdvantage": "China 11.4% Cheaper (Domestic Enclosure Assembly)",
+    "exportControlStatus": "Unrestricted Civilian Cryptography",
+    "distributorPricing": {
+      "moq": 50,
+      "wholesaleDiscountPercent": 35,
+      "buyerRole": "Enterprise IT & Web3 Wholesalers",
+      "leadTimeWeeks": 1
+    },
+    "shipping": {
+      "usaShippingDays": 2,
+      "chinaShippingDays": 3,
+      "customsClearance": "Instant Express Postal"
+    },
+    "rating": 4.9,
+    "reviewsCount": 420,
+    "inStock": true,
+    "stockQty": 350
+  },
+  {
+    "id": "prod-300mm-wafer-foup",
+    "name": "Entegris Spectra 300mm Silicon Wafer FOUP Carrier Pod",
+    "brand": "Entegris (Billerica, MA / USA)",
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=800&auto=format&fit=crop&q=60",
+    "badge": "Foundry Standard",
+    "description": "Ultra-clean Front Opening Unified Pod (FOUP) for transporting 25x 300mm wafers in ISO Class 1 cleanrooms with nitrogen purge purge-ports.",
+    "specs": {
+      "Wafer Capacity": "25 Wafers (300mm / 12-inch diameter)",
+      "Cleanliness": "SEMI E47.1 & E57 Compliant (ISO Class 1)",
+      "Purge Technology": "Diffuser-based Nitrogen Purge (N2)",
+      "Material": "Carbon-filled PEEK Conductive Polymer",
+      "Weight": "4.8 kg empty"
+    },
+    "usaPriceUsd": 6500,
+    "chinaPriceCny": 38000,
+    "chinaPriceUsdEquivalent": 5248,
+    "globalAverageUsd": 6100,
+    "priceDifferencePercent": -19.2,
+    "priceAdvantage": "China 19.2% Cheaper (SMIC Supply Chain Alternative)",
+    "exportControlStatus": "Semiconductor Fab Consumable / Dual Sourced",
+    "distributorPricing": {
+      "moq": 10,
+      "wholesaleDiscountPercent": 25,
+      "buyerRole": "Cleanroom & Foundry Logistics",
+      "leadTimeWeeks": 2
+    },
+    "shipping": {
+      "usaShippingDays": 4,
+      "chinaShippingDays": 3,
+      "customsClearance": "Standard Cleanroom Cargo"
+    },
+    "rating": 4.8,
+    "reviewsCount": 45,
+    "inStock": true,
+    "stockQty": 40
+  },
+  {
+    "id": "prod-dilution-cryo-cables",
+    "name": "Bluefors 24-Channel Semi-Rigid NbTi Cryogenic Coaxial Loom",
+    "brand": "Bluefors (Helsinki / Global)",
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=60",
+    "badge": "Quantum Lab Essential",
+    "description": "Superconducting Niobium-Titanium (NbTi) cryogenic RF cable assembly for microwave qubit drive lines from 4 Kelvin down to 10 milliKelvin.",
+    "specs": {
+      "Channels": "24 Hermetic SMPM Coaxial Lines",
+      "Attenuation": "< 0.4 dB/m at 5 GHz at 10mK",
+      "Material": "Superconducting NbTi outer/inner conductor",
+      "Thermal Anchoring": "Gold-plated copper thermalizer clamps",
+      "Frequency Range": "DC to 18 GHz"
+    },
+    "usaPriceUsd": 14200,
+    "chinaPriceCny": 86000,
+    "chinaPriceUsdEquivalent": 11878,
+    "globalAverageUsd": 13500,
+    "priceDifferencePercent": -16.3,
+    "priceAdvantage": "China 16.3% Cheaper (Domestic Asian Quantum Labs)",
+    "exportControlStatus": "Wassenaar Cryo Component Approved",
+    "distributorPricing": {
+      "moq": 3,
+      "wholesaleDiscountPercent": 18,
+      "buyerRole": "Quantum Computing OEMs",
+      "leadTimeWeeks": 3
+    },
+    "shipping": {
+      "usaShippingDays": 5,
+      "chinaShippingDays": 4,
+      "customsClearance": "Precision RF Scientific Instrument"
+    },
+    "rating": 4.9,
+    "reviewsCount": 32,
+    "inStock": true,
+    "stockQty": 15
+  }
+]

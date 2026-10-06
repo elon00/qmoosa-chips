@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Cpu, Layers, ShoppingCart, Bot, Terminal, Wallet, Sparkles, RefreshCw, Globe2 } from 'lucide-react';
+import { Cpu, Layers, ShoppingCart, Bot, Terminal, Wallet, Sparkles, RefreshCw, Globe2, Store, ArrowLeftRight } from 'lucide-react';
 import { Header } from './components/Header';
 import { GlobalChipsTracker } from './components/GlobalChipsTracker';
 import { ConwayWaferSimulator } from './components/ConwayWaferSimulator';
@@ -7,13 +7,17 @@ import { X402BazaarSync } from './components/X402BazaarSync';
 import { MultiModelAIChat } from './components/MultiModelAIChat';
 import { MultiWalletQRHub } from './components/MultiWalletQRHub';
 import { AutomationConsole } from './components/AutomationConsole';
+import { AmazonMarketplace, UserRole } from './components/AmazonMarketplace';
+import { MarketPriceComparison } from './components/MarketPriceComparison';
+import { MarketplaceCheckoutModal } from './components/MarketplaceCheckoutModal';
 
 import { MultiWalletManager, WalletState } from './wallet/MultiWalletManager';
 import { X402BazaarClient } from './x402/X402BazaarClient';
 import { X402Synchronizer, SyncStatus } from './x402/X402Synchronizer';
 import { MultiModelAgent } from './agents/MultiModelAgent';
+import productsData from './config/marketplace-products.json';
 
-type ActiveTab = 'overview' | 'chips' | 'conway' | 'x402' | 'agent' | 'automation';
+type ActiveTab = 'overview' | 'marketplace' | 'comparison' | 'chips' | 'conway' | 'x402' | 'agent' | 'automation';
 
 export const App: React.FC = () => {
   // Instantiations
@@ -27,6 +31,13 @@ export const App: React.FC = () => {
   const [activeWallet, setActiveWallet] = useState<WalletState>(() => walletManager.getActiveWallet());
   const [syncStatus, setSyncStatus] = useState<SyncStatus>(() => synchronizer.getInitialStatus());
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
+
+  // Marketplace & Cart States
+  const [cartCount, setCartCount] = useState(1);
+  const [checkoutProduct, setCheckoutProduct] = useState<any | null>(null);
+  const [checkoutRole, setCheckoutRole] = useState<UserRole>('buyer');
+  const [checkoutQty, setCheckoutQty] = useState(1);
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
   // Wallet Modal & QR state
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
@@ -62,6 +73,13 @@ export const App: React.FC = () => {
     setIsWalletModalOpen(true);
   };
 
+  const handleOpenProductCheckout = (product: any, role: UserRole = 'buyer', qty: number = 1) => {
+    setCheckoutProduct(product);
+    setCheckoutRole(role);
+    setCheckoutQty(qty);
+    setIsCheckoutOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-[#070b14] text-slate-100 flex flex-col font-sans">
       {/* Global Navigation Header */}
@@ -85,6 +103,30 @@ export const App: React.FC = () => {
           >
             <Globe2 className="w-3.5 h-3.5" />
             <span>Master Overview</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('marketplace')}
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl transition-all ${
+              activeTab === 'marketplace'
+                ? 'bg-amber-400 text-black font-bold shadow-[0_0_12px_rgba(251,191,36,0.3)]'
+                : 'text-slate-400 hover:text-amber-300 hover:bg-cyber-800'
+            }`}
+          >
+            <Store className="w-3.5 h-3.5 text-amber-400" />
+            <span>Amazon Tech Bazaar</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('comparison')}
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl transition-all ${
+              activeTab === 'comparison'
+                ? 'bg-cyan-500 text-black font-bold shadow-[0_0_12px_rgba(6,182,212,0.3)]'
+                : 'text-slate-400 hover:text-cyan-300 hover:bg-cyber-800'
+            }`}
+          >
+            <ArrowLeftRight className="w-3.5 h-3.5" />
+            <span>USA vs China Prices</span>
           </button>
 
           <button
@@ -157,15 +199,22 @@ export const App: React.FC = () => {
             <span className="text-3xl">🛡️</span>
             <div>
               <h2 className="text-sm font-bold text-cyan-200">
-                QMoosa Chips — Sovereign Silicon & Lithography Coordination Protocol
+                QMoosa Chips — Sovereign Silicon, Quantum & Gadgets Marketplace
               </h2>
               <p className="text-xs text-slate-400">
-                Bridging Western High-NA EUV (ASML) with Sovereign Eastern Synchrotrons (SMIC/SMEE SSMB) via ICP smart canisters & x402 micro-settlements.
+                Amazon-style global commerce for Silicon Valley gadgets, super laptops, and quantum computers with USA vs. China price comparison and dual-rail fiat & crypto QR gateways.
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => handleOpenProductCheckout(productsData[0], 'buyer', 1)}
+              className="px-3.5 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-600/60 text-xs font-mono transition-all flex items-center gap-1.5"
+            >
+              <Store className="w-3.5 h-3.5" />
+              <span>Explore Marketplace</span>
+            </button>
             <button
               onClick={() => setIsWalletModalOpen(true)}
               className="px-3.5 py-1.5 rounded-xl bg-cyber-900 hover:bg-cyber-800 text-cyan-300 border border-cyan-700/60 text-xs font-mono transition-all flex items-center gap-1.5 shadow-[0_0_12px_rgba(6,182,212,0.2)]"
@@ -179,6 +228,15 @@ export const App: React.FC = () => {
         {/* Tab Displays */}
         {activeTab === 'overview' && (
           <div className="space-y-6">
+            <AmazonMarketplace
+              onOpenCheckout={handleOpenProductCheckout}
+              onNavigateToComparison={() => setActiveTab('comparison')}
+              cartCount={cartCount}
+              onOpenCartModal={() => handleOpenProductCheckout(productsData[4], 'buyer', 1)}
+            />
+            <MarketPriceComparison
+              onSelectProductForCheckout={(p) => handleOpenProductCheckout(p, 'buyer', 1)}
+            />
             <GlobalChipsTracker
               onRequestQuote={(path) => handleOpenQRWithAmount(0.015, 'ICP', path)}
               onSimulateNode={() => setActiveTab('conway')}
@@ -198,6 +256,21 @@ export const App: React.FC = () => {
             </div>
             <AutomationConsole x402Client={x402Client} />
           </div>
+        )}
+
+        {activeTab === 'marketplace' && (
+          <AmazonMarketplace
+            onOpenCheckout={handleOpenProductCheckout}
+            onNavigateToComparison={() => setActiveTab('comparison')}
+            cartCount={cartCount}
+            onOpenCartModal={() => handleOpenProductCheckout(productsData[4], 'buyer', 1)}
+          />
+        )}
+
+        {activeTab === 'comparison' && (
+          <MarketPriceComparison
+            onSelectProductForCheckout={(p) => handleOpenProductCheckout(p, 'buyer', 1)}
+          />
         )}
 
         {activeTab === 'chips' && (
@@ -232,6 +305,15 @@ export const App: React.FC = () => {
         )}
       </main>
 
+      {/* Express Checkout & Dual-Rail Payment Modal */}
+      <MarketplaceCheckoutModal
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        product={checkoutProduct}
+        role={checkoutRole}
+        initialQty={checkoutQty}
+      />
+
       {/* Multi-Wallet & Dual-Rail QR Modal */}
       <MultiWalletQRHub
         walletManager={walletManager}
@@ -247,7 +329,7 @@ export const App: React.FC = () => {
       {/* Footer */}
       <footer className="border-t border-cyan-950 bg-cyber-900/80 py-4 px-4 lg:px-8 text-center text-xs font-mono text-slate-500">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>QMoosa Chips Protocol © 2026 • Web 4.0 Semiconductor Infrastructure</span>
+          <span>QMoosa Chips Protocol © 2026 • Web 4.0 Semiconductor & Quantum Infrastructure</span>
           <span className="text-cyan-400">Deployed via Caffeine.ai on Internet Computer Protocol (ICP)</span>
         </div>
       </footer>

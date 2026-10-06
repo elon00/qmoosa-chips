@@ -87,13 +87,31 @@ Real-time tracking of:
   - **Murphy Model:** $Y = \left(\frac{1 - e^{-A \cdot D_0}}{A \cdot D_0}\right)^2$
 - Generates on-chain proof hash committed to the ICP canister (`did:chip:qmoosa:...`).
 
-### 4. Multi-Model AI Agentics Chatbot
-- **Gemini 2.0 Pro:** Fast multi-agent coordination, x402 auctions, multi-wallet routing.
+### 4. Amazon-Style Global Tech Bazaar & Market Price Comparison (USA vs. China)
+- **Product Catalogues**:
+  - **Quantum Computers & QPUs**: Origin Quantum Wukong 72-Qubit, IonQ Forte Enterprise, QMoosa Shor-256 Co-Processor, SpinQ Gemini Desktop NMR.
+  - **Super Laptops**: Titan Apex AI Dual RTX 5090 Max-P, Sovereign Kirin-Quantum NeuralBook, Apple M4 Max Extreme.
+  - **Silicon Valley Gadgets**: Neuralink Telepathy BCI Dev Kit, ASML High-NA Optical Alignment Tool, QMoosa FIPS-204 Quantum HSM Key.
+  - **Accessories & Cryo Fab Gear**: Bluefors 24-Channel Semi-Rigid Cryo Loom, Entegris 300mm Silicon Wafer FOUP Carrier.
+- **USA vs. China Price Comparison Engine**:
+  - Live side-by-side pricing in USD, CNY, EUR, INR, and ICP.
+  - Identifies export control / US BIS Entity List impacts vs. China domestic state subsidies (15% to 38% arbitrage differentials).
+  - Fast shipping estimates across US West Coast (1-3 days) and Shenzhen/Shanghai (2-7 days).
+- **Stakeholder Roles**:
+  - **Retail Buyer**: Standard consumer MSRP and express shipping.
+  - **Authorized Distributor**: Bulk wholesale pricing, Minimum Order Quantities (MOQ), and volume rebates (-18% to -35%).
+  - **Foundry / OEM Supplier**: Integration with wafer yield validation via Conway Automaton.
+- **Dual-Rail Payment Gateways & QR Rails**:
+  - **Crypto Rails**: ICP, ckBTC, ETH, SOL, USDC with dynamic BIP-21 / EIP-681 / Solana Pay QR codes.
+  - **Fiat Rails**: Instant UPI (India), SEPA (Eurozone EPC QR), and Stripe / Credit Card checkout with instant cryptographic order receipts.
+
+### 5. Multi-Model AI Agentics Chatbot
+- **Gemini 2.0 Pro:** Fast multi-agent coordination, market arbitrage, x402 auctions, multi-wallet routing.
 - **DeepSeek Coder / V3:** Silicon RTL & Verilog tape-out synthesis.
 - **ICP On-Chain Neural Canister:** Deterministic Web4 consensus & proof attestation.
 - **Claude 3.5 Sonnet:** Lithography physics, EUV optical train degradation, Poisson yield analysis.
 
-### 5. Multi-Wallet & Dual-Rail Dynamic QR Generator
+### 6. Multi-Wallet & Dual-Rail Dynamic QR Generator
 - **Crypto Rails:** ICP, ckBTC, ETH, SOL, USDC (BIP-21, EIP-681, Solana Pay).
 - **Fiat Rails:**
   - **UPI (India):** Real-time NPCI VPA QR code (`upi://pay?pa=qmoosa.chips@icp&am=...`).
